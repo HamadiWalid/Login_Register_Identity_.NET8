@@ -71,12 +71,12 @@ namespace Login_Register_Identity_.NET8.Areas.Identity.Pages.Account
         /// </summary>
         public class InputModel
         {
-            [Required]
+           
+
             [DataType(DataType.Text)]
             [Display(Name = "First Name")]
             public string FirstName { get; set; }
 
-            [Required]
             [DataType(DataType.Text)]
             [Display(Name = "Last Name")]
             public string LastName { get; set; }
@@ -113,6 +113,10 @@ namespace Login_Register_Identity_.NET8.Areas.Identity.Pages.Account
 
         public async Task OnGetAsync(string returnUrl = null)
         {
+            if (User.Identity.IsAuthenticated)
+            {
+                Response.Redirect("/");
+            }
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
