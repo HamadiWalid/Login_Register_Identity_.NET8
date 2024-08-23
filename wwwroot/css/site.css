@@ -1,0 +1,204 @@
+html {
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    font-family: Roboto,sans-serif;
+}
+
+.login-logout-card .card-header {
+    padding: 0px 0px 12px 0px;
+}
+
+.login-logout-card ul.nav-tabs {
+    margin: 0px 0px -12px 0px;
+}
+
+.login-logout-card li.nav-item {
+    width: 50%;
+}
+
+.login-logout-card a.nav-link {
+    font-size: 1rem;
+    color: #495057;
+    text-align: center;
+    padding: 1rem;
+}
+
+.login-logout-card .card-body {
+    padding: 10px 20px;
+}
+
+
+/*//////////////////////////////////////////////////////////////*/
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.login-box {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    height: 75vh;
+    max-height: 700px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.login-left {
+    background: linear-gradient(to bottom right, #EBF8FE, #ffffff);
+    padding: 70px;
+    flex: 1;
+}
+
+.login-right {
+    flex: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+    .login-right img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+
+.login-signup-links .login-link.active {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.login-signup-links .signup-link.active {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 10px;
+    position: relative;
+    display: inline-block;
+}
+.login-signup-links .signup-link {
+    color: #6A6D6F;
+}
+
+.login-signup-links .login-link.active::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 4px;
+    background-color: #315DFF;
+    position: absolute;
+    left: 30%;
+    bottom: -8px;
+    border-radius: 30px;
+}
+.login-signup-links .signup-link.active::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 4px;
+    background-color: #315DFF;
+    position: absolute;
+    left: 30%;
+    bottom: -8px;
+    border-radius: 30px;
+}
+.login-button {
+    background-color: #315DFF;
+    font-size: 15px;
+    border-color: #315DFF;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+    .login-button:hover {
+        background-color: #315DFF;
+        font-size: 15px;
+        transform: translateY(-2px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+.remember-me-label {
+    color: #6D7071;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.separator {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 30px 0;
+}
+
+    .separator::before, .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #E0E0E0;
+    }
+
+.separator-text {
+    font-size: 16px;
+    color: black;
+    padding: 0 15px;
+}
+
+.google-button-container {
+    text-align: center;
+}
+
+.google-button {
+    color: black;
+    font-size: 15px;
+    background-color: transparent;
+    border-color: #D5DBE7;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    height: calc(2.875rem + 2px);
+}
+
+    .google-button:hover {
+        color: black;
+        font-size: 15px;
+        background-color: transparent;
+        border-color: #D5DBE7;
+        transform: translateY(-2px);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}

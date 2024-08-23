@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "/Views/Shared/_layout.cshtml";
+}
+
+          
+
+<div class="row justify-content-center mt-5">
+        @RenderBody()
+</div>
+ 
+
+
+@section Scripts {
+    @await RenderSectionAsync("Scripts", required: false)
+    <script>
+        $(function () {
+            const currentPage = location.pathname;
+            $('.nav-tabs li a').each(function () {
+                const $this = $(this);
+                if (currentPage.toLowerCase().indexOf($this.attr('href').toLowerCase()) !== -1) {
+                    $this.addClass('active');
+                }
+            })
+        })
+    </script>
+}

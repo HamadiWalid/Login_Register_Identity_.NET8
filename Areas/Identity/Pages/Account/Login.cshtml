@@ -1,0 +1,68 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "~/Areas/Identity/Pages/_IdentityLayout.cshtml";
+}
+
+<div class="login-container" style="margin-top:70px;">
+    <div class="login-box">
+        <div class="login-left">
+            <div class="logo-container" style="display: flex; align-items: center; justify-content: center; margin-bottom: 60px;">
+                <img src="~/css/logo.png" alt="Logo" style="max-width: 150px; margin-right: 10px;" />
+                <h4 style="margin: 0; font-weight:bolder">Crypto</h4>
+            </div>
+            <div class="login-signup-links" style="text-align: center; margin-bottom: 50px;">
+                <a href="/Identity/Account/Login" class="login-link active" style="color: black; font-weight: bold; text-decoration: none; padding: 0 10px;">Log In</a>
+                <a href="/Identity/Account/Register" class="signup-link" style="color: grey; text-decoration: none; padding: 0 10px;">Sign Up</a>
+            </div>
+            <form id="account" method="post">
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+
+                <div class="mb-3">
+                    <label asp-for="Input.Email" class="form-label" style="font-weight: bold;">Email</label>
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-2">
+                    <label asp-for="Input.Password" class="form-label" style="font-weight: bold;">Password</label>
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Password" />
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+
+                <div class="checkbox mb-3">
+                    <label asp-for="Input.RememberMe" class="form-label remember-me-label">
+                        <input class="form-check-input" asp-for="Input.RememberMe" />
+                        @Html.DisplayNameFor(m => m.Input.RememberMe)
+                    </label>
+                </div>
+                <div>
+                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary login-button">Log In</button>
+                </div>
+            </form>
+
+            <div class="separator">
+                <span class="separator-text">or</span>
+            </div>
+
+            <div class="google-button-container">
+                <button type="button" class="w-100 btn btn-lg btn-primary google-button">
+                    <img src="~/css/google.png" alt="Logo" style="max-width: 150px; margin-right: 10px;" />
+                    Continue with Google
+                </button>
+
+            </div>
+        </div>
+        <div class="login-right">
+            <img src="~/css/hero.png" alt="Login Image" />
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
+
